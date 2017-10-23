@@ -1,0 +1,16 @@
+FROM igorilic/nginx-nodejs-bash-alpine:stable
+
+RUN apk update && \
+      apk add --no-cache \
+      python \
+      build-base \
+      openjdk8-jre-base \
+      udev \
+      ttf-freefont \
+      chromium-chromedriver \
+      chromium
+
+RUN ["java", "-version"]
+
+ENV CHROME_BIN /usr/bin/chromium-browser
+
