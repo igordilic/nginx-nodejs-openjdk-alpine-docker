@@ -1,4 +1,4 @@
-FROM igorilic/nginx-nodejs-bash-alpine:latest
+FROM igorilic/nginx-nodejs-bash-alpine:node7x
 
 RUN apk update && \
       apk add --no-cache \
